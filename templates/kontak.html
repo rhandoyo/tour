@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<div id="carouselExampleSlidesOnly" class="carousel slide mt-2" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img style="height: 400px;" src="{% static 'img/home/kkk.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img style="height: 400px;" src="{% static 'img/home/renjani.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img style="height: 400px;" src="{% static 'img/home/renjani1.jpg' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+<!-- kontak -->
+<div class="container">
+  <div class="row" style="margin-top: 100px;">
+    
+    <!-- {% if messages %}
+      
+      {% for message in messages %}
+        <div class="alert alert-success">{{message}}</div>
+      {% endfor %}
+        
+    {% endif %} -->
+      
+    <div class="col-sm-5">
+      <h2>kontak kami melalui email :</h2>
+      <div class="garis"></div>
+        <form method="POST">
+              {% csrf_token %}
+              <div class="mb-3 mt-5">
+                <label for="nama" class="form-label">Nama lengkap</label>
+                <input type="text" name="nama" required class="form-control" id="nama">
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" required class="form-control" id="email">
+              </div>
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea required class="form-control" name="pesan" id="pesan" rows="3"></textarea>
+              </div>
+              <input type="submit" class="btn btn-default-kontak" value="Kirim">
+        </form>
+    </div>
+
+    <div class="col-sm-7">
+      <h2 style="margin-left: 100px;">Temukan alamat kami :</h2>
+      <div class="garis" style="margin-left: 100px;"></div>
+      <iframe style="margin-left: 100px; height: 300px;" class="mt-5" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.540363497004!2d116.17397661430026!3d-8.640045893791243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdb9d8c90e171f%3A0x785574ba7a99a798!2sShaka%20tour%20and%20travel!5e0!3m2!1sid!2sid!4v1633628344051!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+      <div class="mt-5" style="margin-left: 100px;">
+        <a class="p-2" href=""><img width="40" src="{% static 'img/sosmed/fb1.png' %}" alt=""></a>
+        <a class="p-2" href=""><img width="40" src="{% static 'img/sosmed/ig.png' %}" alt=""></a>
+        <a class="p-1" href=""><img width="50" src="{% static 'img/sosmed/tw.png' %}" alt=""></a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+  

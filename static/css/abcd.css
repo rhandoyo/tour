@@ -1,0 +1,215 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+h1{
+    /* color:rgba(0,0,0,.55); */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 400;
+
+}
+
+.alert-success{
+    background-color: #004077;
+}
+
+p, li, h3, h4 {
+    color: #272727;
+}
+
+.jmb{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+}
+
+.header-atas{
+    /* background-color: #0160D6; */
+    height: 100px;
+}
+
+.header-atas .navbar ul li a{
+    color: #272727;
+}
+
+.btn-default-kontak{
+    background-color: #004077;
+    color: #fff;
+}
+
+
+.navbar .underline{
+    width: 100%;
+    height: 2px;
+    background-color: #004077;
+    
+}
+
+.ac{
+    background-color: plum;
+}
+.navbar .nav-item{
+    color: wheat;
+}
+
+
+
+.header-atas .left{
+    margin-top: 100px;
+}
+
+.header-atas h2{
+    color: #fff;
+}
+.header-atas .btn-default{
+    background-color: wheat;
+}
+
+.navbar ul li a{
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.jmb .title{
+    color: white;
+    margin-top: 10px;
+}
+
+.bg-default .nav-item .nav-link{
+    margin-left: 13px;
+    font-size: 1.2em;
+}
+
+.header-title .p{
+    width: 10%;
+    border: 2px solid #272727;
+}
+
+h1, h2, h5{
+    color:#272727;
+    /* color:rgba(0,0,0,.55); */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.card{
+    color:rgb272727;
+}
+
+
+.btn-default{
+    border: 1px solid rgb(107, 103, 103);
+    border-radius: 13px;
+    align-self: center;
+    font-size: medium;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    color: rgb(117, 112, 112);
+}
+
+.btn-detail-paket{
+    /* background-color: rgb(233, 156, 14); */
+    background-color: #004077;
+    color: #fff;
+    border-radius: 14px;
+}
+
+.kontak{
+    background-color: #fff;
+    color: 272727;
+    width: 100%;
+    height: 500px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* .active{
+    
+} */
+
+.footer{
+    margin-top: 100px;
+    padding-top: 120px;
+    width: 100%;
+    height: 400px;
+    text-align:center;
+    color: #272727;
+    background-color: #004077;
+}
+
+.footer p{
+    color: #f1f0f0;;
+}
+
+.paket-tour{
+    height: 400px;
+    width: 550px;
+    background-image: url('../img/home/paket-tour.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y:50px;
+    margin: auto;
+    border: 2px solid rgb(151, 137, 137);
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(17,26,104,.15);
+}
+
+.paket-transport{
+    height: 400px;
+    width: 550px;
+    background-image: url('../img/home/transportasi.jpg');
+    background-position: center;
+    background-position-y: 50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    border-radius: 8px;
+    border: 2px solid rgb(151, 137, 137);
+    box-shadow: 0 6px 20px rgba(17,26,104,.15);
+
+}
+
+.paket .header-paket{
+    /* background-color: #00bfa5 ; */
+    height: 50px;
+    color: rgb(90, 85, 85);
+    text-align: center;
+}
+
+.paket .btn-default{
+    background-color: #fb8c00;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    position: relative;
+    top: 230px;
+    left: 180px;
+    width: 200px;
+}
+
+.card-blog{
+    /* border-bottom-left-radius: 30px; */
+    /* border-top-right-radius: 30px; */
+    box-shadow: rgb(151, 137, 137);
+}
+
+
+.wa{
+    /* background-image: url('../img/whatsapp.svg'); */
+    /* border-image-width: 40px; */
+    left: 13px;
+    bottom: 30px;
+    background-size: 100px;
+}
+
+.garis{
+    width: 200px;
+    height: 3px; 
+    background-color: #004077;
+}

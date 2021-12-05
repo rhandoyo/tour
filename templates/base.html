@@ -1,0 +1,59 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/abcd.css' %}"> 
+    <title>shaka tour</title>
+  </head>
+  <body>
+    {% include 'navbar.html' %}    
+   
+
+
+    <!-- kontens? -->
+    {% block content %}
+      
+    
+    {% endblock content %}
+
+    
+    
+      
+    
+    <a href="https://api.whatsapp.com/send?phone=+6287810290579&text=Hii%20kak%2C%20minta%20info%20untuk%20paket%20wisatanya%20dong%20!!!">
+      <div class="wa" style="position: fixed;">
+        <img src="{% static 'img/whatsapp.svg' %}" width="80" alt="">
+      </div>
+    </a>
+
+    <div class="footer">
+      <p>&copy; 2021 Shaka Travel Lombok</p>
+      <p>Alamat : jln.Tgh.Ibrahim Khalidi Kediri</p>
+      <p>Kediri, NTB, Indonesia</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    {% if messages %}
+     
+      {% for message in messages %}
+          <script>
+            Swal.fire(
+              '{{message}}',
+            )
+          </script>
+      {% endfor %}
+       
+     {% endif %}
+    
+  </body>
+</html>

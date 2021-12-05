@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container">
+          
+    <div class="card mb-2 mt-5">
+      <img src="{{paket.poto.url}}" class="img-fluid" alt="..." style="height: 400px;">
+            <div class="card-body p-5">
+              <div class="row">
+                <div class="col-sm-8">
+                    <h1 style="color: #004077;" class="card-title">Paket Tour {{paket.nama_paket}}</h1>
+                    <div class="garis mb-5"></div>
+                    <p>Paket tour wisata <b>{{ paket.durasi}}</b> siap menjadi pilihan paket wisata terbaik anda. dan kami dari shaka tour siap menemani perjalanan liburan anda, seperti mengunjungi destinasi alam, pantai, dan makanan khas yang ada di lombok.</p>
+                    <br>
+                    <h2><li>Destinasi yang di dapatkan</li></h2>
+
+                    <h5 class="mt-4">Pantai kuta lombok</h5>
+                    <img src="https://gotripina.com/wp-content/uploads/2019/06/Pantai-Kuta-Lombok-sumber-ig-kelombok_dawek.jpg" class="img-fluid" alt="..." style="height: 300px; width: 90%;">
+
+                    <h5 class="mt-5">Rumah adat sasak</h5>
+                    <img src="http://asset-a.grid.id/crop/0x0:0x0/x/photo/2018/07/25/534017990.jpg" class="img-fluid" alt="..." style="height: 300px; width: 90%;">
+
+                    <h5 class="mt-5">Pantai senggigi</h5>
+                    <img src="https://tempatwisataseru.com/wp-content/uploads/2017/11/keindahan-Pantai-Senggigi.jpg" class="img-fluid" alt="..." style="height: 300px; width: 90%;">
+                    <br><br><br>
+                    <h2><li>Perjalanan (Itenerary)</li></h2>
+                    <p>Jadwal perjalan paket wisata kami sudah ditentukan, tinggal anda yang memilih sendiri jadwal yang akan kita kunjungi, dan untuk merubah jadwal bisa anda konsultasi dengan kami</p>
+                        {% for p in paket_list_hari  %}
+                          <h4 class="card-text">{{p.hari}}</h4>
+                          <ul>
+                            {% for i in p.list.all  %}
+                            <li>
+                              {{i.nama}}
+                            </li>
+                            {% endfor %}
+                          </ul>           
+                        {% endfor %}
+                     <br>     
+                    <h2><li>Harga paket wisata {{paket.durasi}}</li></h2>
+                    <table class="table">
+                      <thead class="bg-success">
+                        <tr>
+                          <th scope="col">Harga</th>
+                          <th scope="col">Jumlah</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                        {% for p in paket.detail_harga.all  %}
+                        <tr>
+                          <td>{{p.harga}}</td>
+                          <td>{{p.jumlah}}</td>
+                        </tr>
+                          
+                        {% endfor %}
+                          
+                      </tbody>
+                    </table>
+
+                    <br><br>
+                    <h2><li>Harga sudah termasuk:</li></h2>
+                    <ul>
+                      <li>Transportasi</li>
+                      <li>Driver berpengalaman</li>
+                      <li>BBM</li>
+                      <li>Tiket masuk di setiap wisata</li>
+                      <li>Hotel</li>
+                      <li>Asuransi</li>
+                      <li>Air mineral selama perjalanan</li>
+                      <li>Parkir</li>
+                    </ul>
+                    <br>
+                    <h2><li>Harga belum termasuk:</li></h2>
+                    <ul>
+                      <li>Tiket pesawat</li>
+                      <li>Tipping untuk driver</li>
+                      <li>keperluan pribadi lainnya</li>
+                    </ul>
+
+                    
+                      
+                  </div>
+
+
+                <div class="col-sm-4">
+                  <h3>Paket wisata lain</h3>
+                </div>
+              </div>  
+            </div>
+          
+
+        <!-- modal -->
+    </div>
+    <button type="button" class="btn btn-detail-paket" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Pesan paket
+    </button>
+      
+      <div class="modal fade p-3" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Pengisin Data pesanan</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form action="" method="POST">
+                  {% csrf_token %}
+                  <div class="row">
+                    <div class="col-md-10 mx-auto">
+                      <div class="form-group mb-2">
+                          <label for="" class="form-label">Nama</label>
+                          <input type="text" class="form-control" required name="nama">
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="" class="form-label">Alamat</label>
+                          <input type="text" class="form-control" required name="alamat">
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="" class="form-label">No Hp</label>
+                          <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}-[0-9]{3}" placeholder="NO." class="form-control" required name="nomor_hp">
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="" class="form-label">Jumlah orang</label>
+                          <input type="text" class="form-control" required name="jumlah_orang">
+                      </div>
+                      <div class="form-group mb-2">
+                          <label for="" class="form-label">Tanggal penjemputan</label>
+                          <input type="date" class="form-control" required name="tanggal_penjemputan">
+                      </div>
+                      <button type="Submit" class="btn btn-detail-paket ">Simpan</button>
+
+                    </div>
+                  </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+            </div>
+          </div>
+        </div>
+      </div>
+
+</div>
+    
+{% endblock content %}
+    

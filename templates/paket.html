@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+
+{% block content %}
+<div class="container">
+    <div class="row mx-auto">
+      <div class="alert" >
+        <i class="fas fa-home"></i>
+        Paket /
+      </div>
+    </div>
+
+    <div class="header-title text-center mb-5">
+      <h2>Paket Wisata</h2>
+      <p class="p mx-auto"></p>
+    </div>
+    <!-- paket pilihan -->
+
+    <div class="row">
+        <div class="col-md-4 mt-4">
+          <div class="card text-center shadow" style="width: 22rem;">
+            <img style="height: 300px;" src="{% static 'img/wisata-tour/Gunung-Rinjani.png' %}" class="card-img-top" >
+            <div class="card-body">
+              <h5 class="card-title">Gunung Renjani Tour</h5>
+              <p class="card-text">Tour 1 hari</p>
+              <p class="card-text">Rp.800.000/Orang</p>
+              <a href="#" class="btn btn-default">Lihat detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4">
+          <div class="card text-center shadow" style="width: 22rem;">
+            <img style="height: 300px;" src="{% static 'img/wisata-tour/3-gili.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">3 Gili</h5>
+              <p class="card-text">Tour 3hari/2 malam</p>
+              <p class="card-text">Rp.1.500.000/Orang</p>
+              <a href="#" class="btn btn-default">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4">
+          <div class="card text-center shadow" style="width: 22rem;">
+            <img style="height: 300px;" src="{% static 'img/wisata-tour/mandalika.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Kuta Mandalika</h5>
+              <p class="card-text">Tour 1 hari</p>
+              <p class="card-text">Rp. 400.000/orang</p>
+              <a href="#" class="btn btn-default">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4">
+          <div class="card text-center shadow" style="width: 22rem;">
+            <img style="height: 300px;" src="{% static 'img/wisata-tour/pantai-pink.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Pantai Pink</h5>
+              <p class="card-text">Tour 1 hari</p>
+              <p class="card-text">Rp.800.000/Orang</p>
+              <a href="#" class="btn btn-default">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4">
+          <div class="card text-center shadow" style="width: 22rem;">
+            <img style="height: 300px;" src="{% static 'img/wisata-tour/senggigi.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Pantai Senggigi</h5>
+              <p class="card-text">Tour 2 hari/1 malam</p>
+              <p class="card-text">Rp.1000.000/Orang</p>
+              <a href="#" class="btn btn-default">Lihat Detail</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mt-4">
+          <div class="card text-center shadow" style="width: 22rem;">
+            <img style="height: 300px;" src="{% static 'img/wisata-tour/air-terjun.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Air terjun</h5>
+              <p class="card-text">Tour 1 hari</p>
+              <p class="card-text">Rp.500.000/Orang</p>
+              <a href="#" class="btn btn-default">Lihat Detail</a>
+            </div>
+          </div>
+        </div>      
+    </div>
+  </div>    
+{% endblock content %}
+
+    
